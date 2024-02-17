@@ -1,0 +1,117 @@
+
+*,  :root {
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-synthesis: none;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing:grayscale;
+-webkit-text-size-adjust: 100%; 
+
+}
+#quiz {
+  counter-reset: quiz-item;
+}
+.quiz-item {
+  margin-top: 24px;
+  border-radius: 6px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.quiz-item h3:before{
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+  background-color: #475569;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;  /*eu não quero que encurte*/
+
+}
+
+.quiz-item h3{
+  padding: 16px 20px;
+  font-size: 24px; 
+  color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1e293b;
+}
+.quiz-item dl{
+  padding: 16px 24px;
+  display: grid;
+  gap: 8px;
+}
+.quiz-item dl dt{
+  padding: 8px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e3f0;
+
+
+}
+input {
+  all: unset;
+  border: 1px solid #a19fa1b8;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;  /*eu não quero que encurte*/
+}
+
+input:checked{
+  border: 1px solid aqua;
+}
+header{
+  margin-top: 50px;
+  padding-bottom: 24px;
+  border: 1px solid black;
+}
+header h1{
+color: #f1f5f9;
+}
+/*pseudo-selector tudo que tem esse ( : ) antes */
+input:checked:before{
+  content:"";
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+  border-radius: 50px;
+
+
+}
+
+body{
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #0f172A;
+  
+}
+main{
+  padding: 10px;
+  max-width: 640px;
+ margin: 0;
+ margin-bottom: 40px;
+
+}
+
+#acertos{
+  text-align: center;
+  background-color: aqua;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+}
